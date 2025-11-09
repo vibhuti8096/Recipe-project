@@ -1,0 +1,62 @@
+@media (max-width: 992px) {
+  header .col-2,
+  header .col-8,
+  header .col-2:last-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  header .col-8 ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  header .col-2:last-child {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.8rem;
+  }
+
+  header .head {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .img-frame img {
+    max-width: 120px;
+  }
+}
