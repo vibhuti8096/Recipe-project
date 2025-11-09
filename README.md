@@ -56,19 +56,6 @@ The app is optimized for the following screen sizes:
 5. Enjoy cooking!
 
 
-```javascript
-const newRecipe = {
-  id: 1,
-  name: "Recipe Name",
-
-### Styling
-
-Modify `css/styles.css` to customize:
-- Colors and themes
-- Typography
-- Layout spacing
-- Animation effects
-
 ## 👨‍💻 Author
 
 **vibhuti8096**
