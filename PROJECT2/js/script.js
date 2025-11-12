@@ -1,42 +1,9 @@
-// const recipe = () => {
-//     fetch('https://dummyjson.com/recipes')
-//         .then(Response => Response.json())
-//         .then(data => {
-//             const recipeList = data.recipes;
-//             const recipe = document.getElementById("recipeModel");
-//             console.log(data.recipes);
-
-//             recipeList.forEach(item => {
-//                 const col = document.createElement('div');
-//                 col.classList.add('col-12', 'col-sm-6', 'col-md-3');
-
-//                 col.innerHTML = `
-//                             <div class="card w-100 d-flex flex-column mt-5" style="width: 18rem;">
-//                                 <img src="${item.image}" class="card-img-top" alt="...">
-//                                 <div class="card-body">
-//                                     <h5 class="card-title">${item.name}</h5>
-//                                     <p class="card-text"><b>Ingredients</b> : ${item.ingredients}</p>
-//                                     <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
-//                                 </div>
-//                             </div>     
-//                         `
-
-//                 recipe.appendChild(col)
-//             });
-
-//         })
-// }
-
-// recipe();
-
-
-
 const recipe = () => {
     fetch('https://dummyjson.com/recipes')
         .then(Response => Response.json())
         .then(data => {
             const recipeList = data.recipes;
-            const recipe = document.getElementById("recipeModel"); // This should be your card container
+            const recipe = document.getElementById("recipeModel");
             console.log(data.recipes);
 
             recipeList.forEach(item => {
@@ -57,10 +24,9 @@ const recipe = () => {
                         </div>
                     </div>
                 `;
-
-                // ✅ Corrected modal logic
+                
                 col.querySelector('.card').addEventListener('click', () => {
-                    const modalContent = document.getElementById("modalContent"); // Correct ID
+                    const modalContent = document.getElementById("modalContent"); 
                     modalContent.innerHTML = `
                        <img src="${item.image}" class="img-fluid mb-3" alt="${item.name}" style="max-width: 300px; height: auto;">
                         <h4>${item.name}</h4>
@@ -68,13 +34,14 @@ const recipe = () => {
                         <p><b>Instructions:</b> ${item.instructions}</p>
                     `;
 
-                    const modal = new bootstrap.Modal(document.getElementById('recipeModal')); // Correct spelling: bootstrap.Modal
-                    modal.show(); // Correct method: modal.show()
+                    const modal = new bootstrap.Modal(document.getElementById('recipeModal')); 
+                    modal.show(); 
                 });
 
                 recipe.appendChild(col);
             });
         });
 }
+
 
 recipe();
